@@ -7,7 +7,7 @@ OBJECTIVE
 
 To implement a conditional modal window (a modal window is a graphical control element subordinate to an application's main window), to redirect a user to Spotify to connect their account before accessing the Jamming application.
 
-# BACKGROUND 	
+### BACKGROUND 	
 
 Currently, when a user first use Jamming, they enter a search term, are then sent to Spotify to log in to their account, and then are redirected to Jamming. Unfortunately, their search term is lost when they are redirected back to Jamming from Spotify. 
 In this feature request, I propose the following application updates:
@@ -17,7 +17,7 @@ In this feature request, I propose the following application updates:
 *	All Jamming users that authenticate with Spotify will have a check mark at the top of the app that says CONNECTED TO SPOTIFY.
 *	A new Footer component will also be created to protect the intellectual rights of both jamming and Codecademy.
 
-# TECHNICAL DESIGN
+### TECHNICAL DESIGN
 Design Updates:
 The new Modal component will contain all of the UI features of the modal window. Its render method will contain a JSX section container with a welcome message and button to connect to Spotify. Above the return statement, a conditional statement will return “null” if this.props.loggedInStatus === true. This will ensure that the user is only prompted to authorize with Spotify using the Modal on their initial log in. 
 Modal’s button property onClick will call the Spotify.getAccessToken() function to authorize Jamming to access their Spotify account. After successful authorization, the user is sent back to Jamming to search songs and the Modal box will disappear when App’s loggedIn state is set to “true.”
@@ -67,7 +67,7 @@ State flow Playlist:
 
 Methods used in the Application:
 
-#	App.js 
++	App.js 
 +	.addTrack
 +	.removeTrack
 +	.updatePlaylistName
@@ -91,7 +91,7 @@ Methods used in the Application:
  
 Figure 1. mock up design of Jamming App.
 
-# CAVEATS
+### CAVEATS
 
 Currently, after a user type in a search query, they are sent to Spotify to authorize their account, and are then sent back to resubmit their query. The goal of this update, then, is to eliminate the need to type the same search query more than once. To achieve this goal, a modal blocks the user from searching until they have signed in.
 A simpler solution would be to save the search query as a prop, state, or cookie and then return the value to the search field after a user returns to the Jamming application. However, the method proposed in this feature request creates a more intuitive authorization flow. 
