@@ -1,8 +1,8 @@
-### Feature Request
-# Application: Jamming
-# Date: May 27, 2022
-# Developer: Prince Ephraim Quarshie
-# email: prince.quarshie@amalitech.org
+# Feature Request
+### Application: Jamming
+### Date: May 27, 2022
+### Developer: Prince Ephraim Quarshie
+### email: prince.quarshie@amalitech.org
 OBJECTIVE
 
 To implement a conditional modal window (a modal window is a graphical control element subordinate to an application's main window), to redirect a user to Spotify to connect their account before accessing the Jamming application.
